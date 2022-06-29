@@ -1,8 +1,8 @@
 const { Router } = require('express');
 
-const  { ImpresionController } = require("../controllers/impresion");
+const  { ImpresionRigido} = require("../controllers/impresion");
 
 const router = Router();
-router.get("/",ImpresionController);
+router.get("/rigido",ImpresionRigido);
 
 module.exports= router;
