@@ -17,7 +17,10 @@
     "pdf2img-promises": "^0.6.6",
     "pdf2pic": "^2.1.4",
     "pdfkit": "^0.13.0",
-    "png-js": "^1.0.0"
+    "png-js": "^1.0.0",
+    "sequelize": "^6.21.2",
+    "tedious": "^14.6.1",
+    "uid": "^2.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.0.0"
