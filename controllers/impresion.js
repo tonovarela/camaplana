@@ -65,7 +65,7 @@ const ImpresionRigido = ({ enAncho, ancho, alto }, { medianilAncho, medianilAlto
 
 const ImpresionFlexible = ({ enAncho, ancho, alto }, { medianilAncho, medianilAlto, anchoPieza, altoPieza }) => {
   console.log({ anchoPieza, altoPieza })
-  const _enAncho = enAncho;//false;
+  const _enAncho = enAncho;//falseit 
   const _alto = 80;
   const _ancho = ancho;
 
