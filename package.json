@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "tonovarela",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
@@ -14,10 +14,7 @@
     "jspdf": "2.0",
     "merge-pdf-buffers": "^1.0.3",
     "pdf-image": "^2.0.0",
-    "pdf2img-promises": "^0.6.6",
-    "pdf2pic": "^2.1.4",
     "pdfkit": "^0.13.0",
-    "png-js": "^1.0.0",
     "sequelize": "^6.21.2",
     "tedious": "^14.6.1",
     "uid": "^2.0.0"

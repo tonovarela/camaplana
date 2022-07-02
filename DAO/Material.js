@@ -48,8 +48,7 @@ class Material extends DAO {
 		a.MATENTRAN4,
 		a.ORIENTA4
   FROM cotizaciones a
-  where FOLIO=:folio`,
-  //{logging:console.log,plain:false }
+  where FOLIO=:folio`,  
             {
 				plain:false,
                 replacements: { folio },
