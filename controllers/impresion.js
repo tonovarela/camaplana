@@ -13,19 +13,18 @@ const Imprimir = async (req, res = response) => {
   const materialDAO = new MaterialDAO();
   const [material] = await materialDAO.porID(folio);
 
+
   if (material == undefined) {
     return res.json({
       "mensaje": "No se encontro informacion de este folio"
     })
   }
   const { item, ListaMateriales } = formatearInformacion(material);
-  const cotizacionBuffer = await httpGet("http://192.168.2.222/litoapps/cotizador/dompdf/cotizacion.php?foliob=" + folio)
-
+  const cotizacionBuffer = await httpGet("http://servicios.litoprocess.com/litoapps/cotizador/dompdf/cotizacion.php?foliob=" + folio)
   res.contentType("application/pdf");
   if (ListaMateriales.length == 0) {
     return res.send(cotizacionBuffer)
   }
-
   let pdf = new PDFGenerator();
   for (const _m of ListaMateriales) {
     let nombreArchivo = _m.esRigido ? ImpresionRigido(_m, item) : ImpresionFlexible(_m, item);

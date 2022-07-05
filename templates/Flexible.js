@@ -44,7 +44,7 @@ const ImpresionFlexible = ({ enAncho, ancho, alto }, { medianilAncho, medianilAl
       incrementadorx += nMediaNilAncho;
       doc.rect((i * (_anchoPieza - nMediaNilAncho)) + (incrementadorx), (_alto - (_altoPieza + 3)), (_anchoPieza - nMediaNilAncho), (_altoPieza - nMediaNilAlto));
     }
-    const nombreArchivo = `${process.cwd()}/files/${uid(16)}Rigido.pdf`;
+    const nombreArchivo = `${process.cwd()}/files/${uid(16)}Rigido.pdf`;    
     doc.save(nombreArchivo);
     return nombreArchivo;
   
