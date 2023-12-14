@@ -18,4 +18,6 @@ app.get('*',(req, res)=>{
 });
 
 
-app.listen(port, ()=>{});
+app.listen(port, ()=>{
+    console.log("Servidor corriendo en el puerto 8083");
+});

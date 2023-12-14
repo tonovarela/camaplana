@@ -57,8 +57,7 @@ const ImpresionRigido = ({ enAncho, ancho, alto }, { medianilAncho, medianilAlto
     }
     
     
-    const nombreArchivo = `${process.cwd()}/files/${uid(16)}Rigido.pdf`;
-    
+    const nombreArchivo = `${process.cwd()}/files/${uid(16)}Rigido.pdf`;    
     doc.save(nombreArchivo);
     return nombreArchivo;
   

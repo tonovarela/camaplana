@@ -15,6 +15,7 @@
     "pdf-image": "^2.0.0",
     "pdf-lib": "^1.17.1",
     "pdfkit": "^0.13.0",
+    "pdftopic": "^1.0.1-alpha",
     "sequelize": "^6.21.2",
     "tedious": "^14.6.1",
     "uid": "^2.0.0"
