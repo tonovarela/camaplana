@@ -9,8 +9,7 @@ const formatearInformacion = (material) => {
 
   }
   const materialItem ={
-    esRigido: material.tipoMaterial == "R",
-    descripcion: material.descripcionMaterial,
+    esRigido: material.tipoMaterial == "MATERIAL RIGIDO",    
     enAncho: material.ORIENTA == "A lo ancho",
     ancho: material.MATANCHO,
     alto: material.MATALTO
