@@ -20,7 +20,7 @@ const Imprimir = async (req, res = response) => {
       "mensaje": "No se encontro informacion de este folio"
     })
   }
-  const { item, materialItem } = formatearInformacion(material);
+  const { item, materialItem } = formatearInformacion(material);  
   let nombreArchivo = materialItem.esRigido ? ImpresionRigido(materialItem, item) : ImpresionFlexible(materialItem, item);    
   let pdfImage = new PDFImage(nombreArchivo);
   try {
