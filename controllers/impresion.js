@@ -21,7 +21,7 @@ const Imprimir = async (req, res = response) => {
     })
   }
   const { item, materialItem } = formatearInformacion(material);
-  let nombreArchivo = materialItem.esRigido ? ImpresionRigido(materialItem, item) : ImpresionFlexible(materialItem, item);  
+  let nombreArchivo = materialItem.esRigido ? ImpresionRigido(materialItem, item) : ImpresionFlexible(materialItem, item);    
   let pdfImage = new PDFImage(nombreArchivo);
   try {
     const archivoImagen = await pdfImage.convertPage(0);

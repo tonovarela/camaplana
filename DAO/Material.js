@@ -15,7 +15,7 @@ class Material extends DAO {
               a.TIPO tipoMaterial,
               a.ORIENTA 
               from  v_cotizaciones_material a  
-        join dbo.cotizaciones c on (c.ID_COTIZACIONES=a.ID_COTIZACIONES)
+        join dbo.cotizaciones_tmp c on (c.ID_COTIZACIONES=a.ID_COTIZACIONES)
         where a.ID_COTIZACIONES_MATERIAL=:id`,  
             {
 				plain:false,

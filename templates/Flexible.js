@@ -1,7 +1,6 @@
 const { jsPDF } = require('jspdf');
 const { uid } = require('uid');
-const ImpresionFlexible = ({ enAncho, ancho, alto }, { medianilAncho, medianilAlto, anchoPieza, altoPieza }) => {
-    
+const ImpresionFlexible = ({ enAncho, ancho, alto }, { medianilAncho, medianilAlto, anchoPieza, altoPieza }) => {     
     const _enAncho = enAncho;//falseit 
     const _alto = 80;
     const _ancho = ancho;
@@ -28,6 +27,7 @@ const ImpresionFlexible = ({ enAncho, ancho, alto }, { medianilAncho, medianilAl
   
     const doc = new jsPDF(orientation, 'cm', [_alto, _ancho]);
     const itemsAncho = Math.trunc(_ancho / _anchoPieza);
+
   
   
   
@@ -36,11 +36,12 @@ const ImpresionFlexible = ({ enAncho, ancho, alto }, { medianilAncho, medianilAl
     doc.setFontSize(100);
     //doc.setDrawColor(98, 5, 100,);
     doc.rect(0, 0, doc.internal.pageSize.width , doc.internal.pageSize.height , 'S');
-    doc.text(ancho / 2, 5, `${ancho} cm  - (${itemsAncho} columnas) `, { align: "center" });
+    doc.text(ancho / 2, 5, `${ancho} cm  - (${(itemsAncho-1)} columnas) `, { align: "center" });
     doc.text(5, alto / 2, `Material Flexible o Fotografico `, { angle: 90, align: "left" });
     
     let incrementadorx = 0;
-    for (let i = 0; i <= (itemsAncho - 1); i++) {
+    console.log(itemsAncho);
+    for (let i = 0; i < (itemsAncho - 1); i++) {
       incrementadorx += nMediaNilAncho;
       doc.rect((i * (_anchoPieza - nMediaNilAncho)) + (incrementadorx), (_alto - (_altoPieza + 3)), (_anchoPieza - nMediaNilAncho), (_altoPieza - nMediaNilAlto));
     }
