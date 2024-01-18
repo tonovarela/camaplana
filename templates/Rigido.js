@@ -30,7 +30,7 @@ const ImpresionRigido = ({ enAncho, ancho, alto }, { medianilAncho, medianilAlto
     const itemsAncho = Math.trunc(_ancho / _anchoPieza);
     const itemsAlto = Math.trunc(_alto / _altoPieza);
     //doc.setDrawColor(98, 5, 100,);
-    doc.rect(0, 0, doc.internal.pageSize.width , doc.internal.pageSize.height , 'S');
+    //doc.rect(0, 0, doc.internal.pageSize.width , doc.internal.pageSize.height , 'S');
     doc.setFont('times', 'bold');
     doc.setFontSize(100);
     doc.text(5 * scale, (_alto * scale * 1.5) / 2, `${_alto} cm  -( ${itemsAlto} renglones) `, { angle: 90 });
